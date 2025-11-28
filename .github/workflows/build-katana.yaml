@@ -12,6 +12,9 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
+      - name: Make build_base.sh executable
+        run: chmod +x ./docker-base/build_base.sh
+
       - name: Build katana_base
         run: ./docker-base/build_base.sh
 
