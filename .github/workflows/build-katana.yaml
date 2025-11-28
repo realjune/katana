@@ -16,7 +16,7 @@ jobs:
 
       - name: Build katana_base image
         run: |
-          cd docker-base
+          cd ././docker-base
           bash build_base.sh
 
       - name: Save katana_base image
@@ -40,4 +40,3 @@ jobs:
             katana.tar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
